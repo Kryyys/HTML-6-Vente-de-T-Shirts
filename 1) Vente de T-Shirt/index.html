@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de T-Shirt</title>
+
+    <style>
+        datalist {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 140px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Vente de T-Shirt</h1>
+
+    <form action="" method="post">
+        <!--Client-->
+        <fieldset>
+
+            <legend>Client</legend>
+
+            <!--Nom, prénom-->
+            <label for="Nom et Prénom">Nom et prénom :</label>
+            <input type="text" name="Nom" placeholder="Nom" pattern="[A-Z]{1,}$" />
+            <input type="text" name="Prénom" placeholder="Prénom" pattern="[A-Z]{1}[a-z]+$" />
+            <br>
+
+            <!--Adresse-->
+            <label for="Adresse">Adresse :</label>
+            <input type="text" name="Adresse"><br>
+
+            <!--Code Postal-->
+            <label for="Code Postal">Code Postal :</label>
+            <input type="text" name="Code Postal" pattern="[0-9]{5}$">
+            <br>
+
+            <!--Pays-->
+            <label for="Pays">Pays :</label>
+            <input type="text" readonly="readonly" value="France">
+
+        </fieldset>
+
+        <br>
+
+        <!--Commande-->
+        <fieldset>
+
+            <legend>Commande</legend>
+
+            <!--Modèle-->
+            <label for="Modèle">Modèle :</label>
+            <input type="text" readonly="readonly" value="Road 66"><br>
+
+            <!--Taille-->
+            <label for="Taille">Taille :</label><br>
+            <input type="range" list="tickmarks">
+            <datalist>
+                <option value="S" label="S"></option>
+                <option value="M" label="M"></option>
+                <option value="L" label="L"></option>
+                <option value="XL" label="XL"></option>
+            </datalist>
+            <br>
+            <!--Quantité-->
+            <label for="Quantité">Quantité :</label>
+            <input type="number" name="Quantité" value="1" min="1" max="165" step="3">
+        </fieldset>
+
+
+
+        <!--Boutons-->
+        <input type="submit" value="Commander" />
+        <input type="reset" value="Recommencer">
+    </form>
+
+</body>
+
+</html>
